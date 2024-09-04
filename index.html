@@ -1,50 +1,83 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top 5 NFL WRs</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Top 5 NFL WRS</title>
+    <style>
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .active, .accordion:hover {
+            background-color: #ccc;
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
 
-    <div class="accordion-container">
-        <button class="accordion">Tyreek Hill</button>
-        <div class="panel">
-            <p>He was ranked as the best player in the  entire NFL according to his peers on the NFL Top 100 Players of 2024.</p>
-            <a href="page1.html">Tyreek</a>
-        </div>
+<h2>Top 5 WR in NFL</h2>
 
-        <button class="accordion">Ceedee Lamb</button>
-        <div class="panel">
-            <p>Ceedee was 2nd in the NFL in recieving yards in the 2023 NFL season tallying 1749 yards only 50 yards behind first place</p>
-            <a href="page2.html">CeeDee</a>
-        </div>
+<button class="accordion">Tyreek Hill</button>
+<div class="panel">
+    <p>He was ranked as the best player in the  entire NFL according to his peers on the NFL Top 100 Players of 2024.</p>
+</div>
 
-        <button class="accordion">Justin Jefferson</button>
-        <div class="panel">
-            <p>Justin Jefferson dealt with a hamstring injury in 2023 and poor QB playh but when healthy is still regarded as one of the best young wideouts in the NFL.</p>
-            <a href="page3.html">Jefferson</a>
-        </div>
+<button class="accordion">Ceedee Lamb</button>
+<div class="panel">
+    <p>Ceedee was 2nd in the NFL in recieving yards in the 2023 NFL season tallying 1749 yards only 50 yards behind first place</p>
+</div>
 
-        <button class="accordion">AJ Brown</button>
-        <div class="panel">
-            <p>AJ Brown is coming off another 1st team All Pro Year and finished top 5 in receving yards at 1456 yards.</p>
-            <a href="page4.html">AJ</a>
-        </div>
+<button class="accordion">Justin Jefferson</button>
+<div class="panel">
+    <p>Justin Jefferson dealt with a hamstring injury in 2023 and poor QB playh but when healthy is still regarded as one of the best young wideouts in the NFL.</p>
+</div>
 
-        <button class="accordion">Davante Adams</button>
-        <div class="panel">
-            <p>Davante Adams is regarded as one of the best wideouts in the league considering his circumstances with the Raiders,he finished with 1100 yards reciving while having a bottom 5 QB throw him the ball.</p>
-            <a href="page5.html">Davante</a>
-        </div>
-    </div>
+<button class="accordion">AJ Brown</button>
+<div class="panel">
+    <p>AJ Brown is coming off another 1st team All Pro Year and finished top 5 in receving yards at 1456 yards. </p>
+</div>
 
-    <script src="script.js"></script>
+<button class="accordion">Davante Adamas</button>
+<div class="panel">
+    <p>Davante Adams is regarded as one of the best wideouts in the league considering his circumstances with the Raiders,he finished with 1100 yards reciving while having a bottom 5 QB throw him the ball.</p>
+</div>
+<div class="link-container">
+    <a href="another-page.html">Go to Another Page</a>
+</div>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>
+
 </body>
 </html>
-
 
 
 
